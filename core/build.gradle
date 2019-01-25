@@ -1,0 +1,16 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.6
+dependencies {
+    implementation 'junit:junit:4.12'
+}
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs = [ "src/com/tsc/main/java/" ]
+sourceSets.test.java.srcDirs = [ "src/com/tsc/test/java/" ]
+sourceSets.main.resources.srcDirs = [ "src/com/tsc/test/res/" ]
+
+
+eclipse.project {
+    name = appName + "-core"
+}
